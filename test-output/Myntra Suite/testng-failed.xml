@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Myntra Suite]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="Listeners.CustomListeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="tesecases.VerifyMyntraSite">
+        <methods>
+          <include name="quitBrowser"/>
+          <include name="flushReport"/>
+          <include name="reportConfiguration"/>
+          <include name="Myntra" invocation-numbers="0"/>
+          <include name="browserSetUp"/>
+        </methods>
+      </class> <!-- tesecases.VerifyMyntraSite -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Myntra Suite] -->
